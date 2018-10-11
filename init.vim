@@ -45,6 +45,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'sk1418/HowMuch'
 Plug 'tpope/vim-fugitive'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
@@ -58,7 +59,10 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn=join(range(121,999),",")
 
 " Clear trailing spaces
-map <F6> :%s/\s\+$//e<CR>
+map tw :%s/\s\+$//e<CR>
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
 
-
+" ICPC
+map cr :!g++ main.cpp && ./a.out < in > out<CR>
